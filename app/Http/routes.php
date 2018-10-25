@@ -74,3 +74,10 @@ Route::get('/altaciclo','controller_cicloescolars@altaciclo');
 Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guardaciclo');
 
 
+Route::get('/altagrupos','controller_grupos@altagrupos');
+Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guardaciclo');
+
+
+
+Route::get('/altalumno','controller_alumnos@altalumno');
+Route::POST('/guardalumno','controller_alumnos@guardalumno')->name('guardalumno');
