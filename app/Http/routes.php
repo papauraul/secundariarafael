@@ -70,6 +70,7 @@ Route::get('/reportegrado','controller_grados@reportegrado');
 Route::get('/modificagrado/{id_grado}','controller_grados@modificagrado')->name('modificagrado');
 Route::POST('/guardamodificag','controller_grados@guardamodificag')->name('guardamodificag');
 
-
+Route::get('/altaciclo','controller_cicloescolars@altaciclo');
+Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guardaciclo');
 
 

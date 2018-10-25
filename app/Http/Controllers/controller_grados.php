@@ -5,30 +5,32 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\$grados;//modelo
-class controller_$grados extends Controller
+use App\grados;//modelo
+class controller_grados extends Controller
 {
+	
+	
     //alta $grados//
-    public function alta$grados()//nombre de la funcion/misma que debes de tener en el archivo routes.php
+    public function altagrados()//nombre de la funcion/misma que debes de tener en el archivo routes.php
     {
      	 
 	 
-	 $clavequesigue = $grados::withTrashed()->orderBy('id_$grado','desc')
+	 $clavequesigue = grados::withTrashed()->orderBy('id_grado','desc')
 								->take(1)
 								->get();
 
 								//Id Desde 0//
 								if(count($clavequesigue)==0)
 								{
-									$id$grado =1;
+									$id_grado =1;
 								}
 								else
 								{
-									$id$grado= $clavequesigue[0]->id_$grado+1;
+									$id_grado= $clavequesigue[0]->id_grado+1;
 								}
 								//////
-     return view ("sistema.alta$grados")
-	 ->with('id$grado',$id$grado);
+     return view ("sistema.altagrados")
+	 ->with('idgrado',$id_grado);
 	}
 	
 	/////

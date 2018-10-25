@@ -34,7 +34,7 @@ class controller_municipios extends Controller
 	}
 	
 	/////
-	//guarda mune//
+	//guarda mun//
     public function guardamunicipio(Request $request)
     {
 		$id_mun = $request->id_mun;
