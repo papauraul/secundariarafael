@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\cicloescolars;
 use App\generacions;
 
+
 class controller_cicloescolars extends Controller
 {
     public function altaciclo()
