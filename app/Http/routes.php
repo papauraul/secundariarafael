@@ -75,9 +75,19 @@ Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guarda
 
 
 Route::get('/altagrupos','controller_grupos@altagrupos');
-Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guardaciclo');
+Route::POST('/guardagrupo','controller_grupos@guardagrupo')->name('guardagrupo');
 
 
 
 Route::get('/altalumno','controller_alumnos@altalumno');
 Route::POST('/guardalumno','controller_alumnos@guardalumno')->name('guardalumno');
+Route::get('/reportealumno','controller_alumnos@reportealumno');
+
+Route::get('/altatutor','controller_tutors@altatutor');
+Route::POST('/guardatutor','controller_tutors@guardatutor')->name('guardatutor');
+
+Route::get('/altaprofesor','controller_profesors@altaprofesor');
+Route::POST('/guardaprofesor','controller_profesors@guardaprofesor')->name('guardaprofesor');
+
+Route::get('/altaclientes','uniformes@altaclientes');
+Route::POST('/guardacliente','uniformes@guardacliente')->name('guardacliente');

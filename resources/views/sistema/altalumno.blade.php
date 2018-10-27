@@ -1,9 +1,9 @@
 <html>
 <body>
 
-<h1>Alta nom_al</h1>
+<h1>Alta alumno</h1>
 <br>
-<form action = "{{route('guardalumno')}}" method = "POST" >                   
+<form action = "{{route('guardalumno')}}" method = "POST" enctype="multipart/form-data">                   
 {{csrf_field()}}
 
 @if($errors->first('id_alum')) 
@@ -17,40 +17,37 @@ Clave<input type = 'text' name = 'id_alum' value="{{$ida}}" readonly ='readonly'
 <i> {{ $errors->first('nom_al') }} </i> 
 @endif	<br>
 
-nom_al<input type = 'text' name  ='nom_al' value="{{old('nom_al')}}"> 
-
+Nombre<input type = 'text' name  ='nom_al' value="{{old('nom_al')}}"> 
+<br>
 @if($errors->first('app_al')) 
 <i> {{ $errors->first('app_al') }} </i> 
 @endif	<br>
 
-app_al<input type = 'text' name  ='app_al' value="{{old('app_al')}}">
-
+Apellido Paterno<input type = 'text' name  ='app_al' value="{{old('app_al')}}">
+<br>
 
 @if($errors->first('apm_al')) 
 <i> {{ $errors->first('apm_al') }} </i> 
 @endif	<br>
 
-apm_al<input type = 'text' name  ='apm_al' value="{{old('apm_al')}}">
-
-@if($errors->first('sexo')) 
-<i> {{ $errors->first('sexo') }} </i> 
-@endif	<br>
-
-sexo<input type = 'text' name  ='sexo' value="{{old('sexo')}}">
-
+Apellido Materno<input type = 'text' name  ='apm_al' value="{{old('apm_al')}}">
+<br>
+Sexo<input type="radio" name="sexo" value="F" CHECKED>F
+<input type="radio" name="sexo" value="M">M
+<br>
 
 @if($errors->first('calle')) 
 <i> {{ $errors->first('calle') }} </i> 
 @endif	<br>
 
 calle<input type = 'text' name  ='calle' value="{{old('calle')}}">
-
+<br>
 @if($errors->first('localidad')) 
 <i> {{ $errors->first('localidad') }} </i> 
 @endif	<br>
 
 localidad<input type = 'text' name  ='localidad' value="{{old('localidad')}}">
-
+<br>
 @if($errors->first('archivo')) 
 <i> {{ $errors->first('archivo') }} </i> 
 @endif	<br>

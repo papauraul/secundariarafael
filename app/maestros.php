@@ -9,7 +9,6 @@ class maestros extends Model
 {
    use SoftDeletes;
    protected $primaryKey = 'idm';  
-   protected $fillable=['idm','nombre','edad','correo','cp',
-                       'sexo','beca','activo','idc','archivo'];
+   protected $fillable=['idm','nombre','edad','correo','cp','sexo','beca','activo','idc','archivo'];
    protected $date=['deleted_at'];
 }

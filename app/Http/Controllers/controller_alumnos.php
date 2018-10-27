@@ -46,6 +46,86 @@ class controller_alumnos extends Controller
 			->with('generacions',$generacions)
 			->with('ida',$ida);
     }
+	
+	
+	
+	//Guarda Alumno//
+	
+	public function guardalumno(Request $request)
+    {
+		
+		$id_alum = $request->id_alum;
+        $nom_al =  $request->nom_al;
+		$app_al = $request->app_al;
+        $apm_al =  $request->apm_al;
+		$sexo = $request->sexo;
+        $calle =  $request->calle;
+		$localidad = $request->localidad;
+		$codigo_al = $request->codigo_al;
+        
+		
+		$this->validate($request,[
+	     'id_alum'=>'required|numeric',
+         'nom_al'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'app_al'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'apm_al'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'calle'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'localidad'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		'archivo'=>'image|mimes:jpeg,png,gif,jpg',
+		 'codigo_al'=>['regex:/^[0-9]{5}$/']
+		 ]);
+		 
+		 $file = $request->file('archivo');
+		 if($file!="")
+		 {
+			 $ldate = date('Ymd_His_');
+			 $img = $file->getClientOriginalName();
+			 $img2 = $ldate.$img;
+			 \Storage::disk('local')->put($img2, \File::get($file));
+		 }
+		 else
+		 {
+		$img2= 'sin_especificar.png';	 
+		 }
+		 
+		 $al = new alumnos;
+		 
+		 
+			$al->id_alum = $request->id_alum;
+			$al->nom_al = $request->nom_al;
+			$al->app_al = $request->app_al;
+			$al->apm_al = $request->apm_al;
+			$al->calle = $request->calle;
+			$al->localidad = $request->localidad;
+			$al->archivo = $img2;
+			$al->codigo_al = $request->codigo_al;
+			$al->id_gen = $request->id_gen;
+			$al->id_grado = $request->id_grado;
+			$al->id_mun = $request->id_mun;
+			$al->id_grupo = $request->id_grupo;
+			
+			//$grado->idc=$request->idc;
+			$al->save();
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
+		
+		
+	}
+	
+	//////////
+	
+	//Reporte//
+	public function reportealumno()
+	{
+	$alumnos=alumnos::withTrashed()->orderBy('id_alum','asc')
+	          ->get();
+	  return view('sistema.reportealumno')
+	  ->with('alumnos',$alumnos);                  
+	}
+	//////////
    
    
    

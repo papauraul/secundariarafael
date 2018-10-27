@@ -35,6 +35,38 @@ class controller_grupos extends Controller
 			->with('grados',$grados)
 			->with('idg',$idg);
     }
+	
+	
+	///guarda grupo//
+	public function guardagrupo(Request $request)
+    {
+		$id_grupo = $request->id_grupo;
+        $grupo =  $request->grupo;
+		
+		$this->validate($request,[
+	     'id_grupo'=>'required|numeric',
+         'grupo'=>['regex:/^[A-Z]+$/']
+		 ]);
+		
+		 $gr = new grupos;
+			$gr->id_grupo = $request->id_grupo;
+			$gr->grupo = $request->grupo;
+			$gr->id_grado = $request->id_grado;
+			//$grado->idc=$request->idc;
+			$gr->save();
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
+		
+		
+		
+	}
+	
+	
+	
+	/////////
    
    
    
