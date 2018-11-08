@@ -29,7 +29,7 @@ class controller_cicloescolars extends Controller
 	  {
      $idce = $clavequesigue[0]->id_ce+1;
       }
-	 $generacions = generacions::orderBy('generacion','asc')
+	 $generacions = generacions::withTrashed()->orderBy('generacion','asc')
 						  ->get();
 	 //return $carreras;
      return view ("sistema.altaciclo")
@@ -37,6 +37,7 @@ class controller_cicloescolars extends Controller
 			->with('generacions',$generacions)
 			->with('idce',$idce);
     }
+	/////guarda ciclo///
 	public function guardaciclo(Request $request)
     {
 		$id_ce = $request->id_ce;
@@ -62,6 +63,9 @@ class controller_cicloescolars extends Controller
         
     }
 	
+	//////
+	
+	//Reporte//
 	
 	
 	

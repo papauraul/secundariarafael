@@ -112,6 +112,15 @@ class controller_tutors extends Controller
 	}
 ////////	
 	
+	//Reporte//
+	public function reportetutor()
+	{
+	$tutors=tutors::withTrashed()->orderBy('id_tut','asc')
+	          ->get();
+	  return view('sistema.reportetutor')
+	  ->with('tutors',$tutors);                  
+	}
+	//////////
 	
 	
 	

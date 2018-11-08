@@ -61,7 +61,15 @@ class controller_municipios extends Controller
     }
 	//////////
 	
-	
+	//Reporte//
+	public function reportemunicipio()
+	{
+	$municipios=municipios::withTrashed()->orderBy('id_mun','asc')
+	          ->get();
+	  return view('sistema.reportemunicipio')
+	  ->with('municipios',$municipios);                  
+	}
+	//////////
 
 
 

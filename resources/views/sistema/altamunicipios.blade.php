@@ -1,9 +1,11 @@
-<html>
-<body>
+@extends('sistema.alta')
+@section('contenido')
+@section('altas')
+<center>
+<h1>Alta Municipio</h1>
+ <table>
 
 
-<h1>Alta municipio</h1>
-<br>
 <form action =  "{{route('guardamunicipio')}}" method ="POST" >                 
 {{csrf_field()}}
 
@@ -17,10 +19,13 @@ Clave<input type = 'text' name = 'id_mun' value="{{$idmun}}" readonly ='readonly
 <i> {{ $errors->first('municipio') }} </i> 
 @endif	<br>
 
-municipio<input type = 'text' name  ='municipio' value="{{old('municipio')}}">
+municipio<input type = 'text'  name  ='municipio' value="{{old('municipio')}}">
 <br>
-
-<input type = 'submit' value = 'Guardar'>
+<br>
+ <tr><td>
+<input type = 'submit' class="btn btn-primary" value = 'Guardar'></td><td>
+<input type = 'reset' class="btn btn-success" value = 'Cancelar'></td></tr>
 </form>
-</body>
-</html>
+</center>
+</table>
+@stop

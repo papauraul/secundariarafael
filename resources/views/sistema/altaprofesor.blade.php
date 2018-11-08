@@ -1,9 +1,11 @@
-<html>
-<body>
+@extends('sistema.alta')
+@section('contenido')
+@section('altas')
+<center>
+<h1>Alta Profesor</h1>
+ <table>
 
 
-<h1>Alta profesor</h1>
-<br>
 <form action =  "{{route('guardaprofesor')}}" method ="POST" enctype="multipart/form-data">                 
 {{csrf_field()}}
 
@@ -11,7 +13,7 @@
 <i> {{ $errors->first('id_profe') }} </i> 
 @endif	<br>
         
-Clave<input type = 'text' name = 'id_profe' value="{{$idprof}}" readonly ='readonly'>
+Clave<input type = 'text'  name = 'id_profe' value="{{$idprof}}" readonly ='readonly'>
 
 <br>
 @if($errors->first('rfc')) 
@@ -26,7 +28,7 @@ RFC<input type = 'text' name  ='rfc' value="{{old('rfc')}}">
 <i> {{ $errors->first('nombre') }} </i> 
 @endif	<br>
 
-Nombre<input type = 'text' name  ='nombre' value="{{old('nombre')}}">
+Nombre<input type = 'text'  name  ='nombre' value="{{old('nombre')}}">
 <br>
 
 <br>
@@ -34,7 +36,7 @@ Nombre<input type = 'text' name  ='nombre' value="{{old('nombre')}}">
 <i> {{ $errors->first('app') }} </i> 
 @endif	<br>
 
-app<input type = 'text' name  ='app' value="{{old('app')}}">
+Apellido Paterno<input type = 'text'  name  ='app' value="{{old('app')}}">
 <br>
 
 <br>
@@ -42,7 +44,7 @@ app<input type = 'text' name  ='app' value="{{old('app')}}">
 <i> {{ $errors->first('apm') }} </i> 
 @endif	<br>
 
-apm<input type = 'text' name  ='apm' value="{{old('apm')}}">
+Apellido Materno<input type = 'text'  name  ='apm' value="{{old('apm')}}">
 <br>
 
 Sexo<input type="radio" name="sexo" value="F" CHECKED>F
@@ -53,7 +55,7 @@ Sexo<input type="radio" name="sexo" value="F" CHECKED>F
 <i> {{ $errors->first('edad') }} </i> 
 @endif	<br>
 
-edad<input type = 'text' name  ='edad' value="{{old('edad')}}">
+edad<input type = 'text'  name  ='edad' value="{{old('edad')}}">
 <br>
 
 <br>
@@ -61,7 +63,7 @@ edad<input type = 'text' name  ='edad' value="{{old('edad')}}">
 <i> {{ $errors->first('calle') }} </i> 
 @endif	<br>
 
-calle<input type = 'text' name  ='calle' value="{{old('calle')}}">
+calle<input type = 'text'  name  ='calle' value="{{old('calle')}}">
 <br>
 
 <br>
@@ -69,7 +71,7 @@ calle<input type = 'text' name  ='calle' value="{{old('calle')}}">
 <i> {{ $errors->first('localidad') }} </i> 
 @endif	<br>
 
-localidad<input type = 'text' name  ='localidad' value="{{old('localidad')}}">
+localidad<input type = 'text'  name  ='localidad' value="{{old('localidad')}}">
 <br>
 
 <br>
@@ -77,24 +79,28 @@ localidad<input type = 'text' name  ='localidad' value="{{old('localidad')}}">
 <i> {{ $errors->first('telefono') }} </i> 
 @endif	<br>
 
-telefono<input type = 'text' name  ='telefono' value="{{old('telefono')}}">
+telefono<input type = 'text'  name  ='telefono' value="{{old('telefono')}}">
 <br>
 
 <br>
 @if($errors->first('archivo')) 
 <i> {{ $errors->first('archivo') }} </i> 
 @endif	<br>
-
+<br>
 Seleccione foto<input type='file' name ='archivo'>
 <br>
-
+<br>
 seleccione id de nom_tut <select name = 'id_mun'>
                         @foreach($municipios as $mun)
 						<option value ="{{$mun->id_mun}}" >{{$mun->municipio}}</option>
                         @endforeach
 						</select>
-<br>					
-<input type = 'submit' value = 'Guardar'>
+<br>		
+<br>			
+<tr><td>
+<input type = 'submit' class="btn btn-primary" value = 'Guardar'></td><td>
+<input type = 'reset' class="btn btn-success" value = 'Cancelar'></td></tr>
 </form>
-</body>
-</html>
+</center>
+</table>
+@stop

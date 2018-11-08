@@ -109,6 +109,15 @@ class controller_profesors extends Controller
 	}
 ////////	
 	
+	//Reporte//
+	public function reporteprofesor()
+	{
+	$profesors=profesors::withTrashed()->orderBy('id_profe','asc')
+	          ->get();
+	  return view('sistema.reporteprofesor')
+	  ->with('profesors',$profesors);                  
+	}
+	//////////
 	
 	
 }

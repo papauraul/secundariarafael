@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('sistema.secundaria');
 });
 /*
 Route::get('/hola', function () {
@@ -66,28 +66,28 @@ Route::POST('/guardamodificam','controller_municipio@guardamodificam')->name('gu
 
 Route::get('/altagrados','controller_grados@altagrados');
 Route::POST('/guardagrado','controller_grados@guardagrado')->name('guardagrado');
-Route::get('/reportegrado','controller_grados@reportegrado');
+Route::get('/reportegrados','controller_grados@reportegrados');
 Route::get('/modificagrado/{id_grado}','controller_grados@modificagrado')->name('modificagrado');
 Route::POST('/guardamodificag','controller_grados@guardamodificag')->name('guardamodificag');
 
 Route::get('/altaciclo','controller_cicloescolars@altaciclo');
 Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guardaciclo');
+Route::get('/reporteciclo','controller_cicloescolars@reporteciclo');
 
 
 Route::get('/altagrupos','controller_grupos@altagrupos');
 Route::POST('/guardagrupo','controller_grupos@guardagrupo')->name('guardagrupo');
+Route::get('/reportegrupos','controller_grupos@reportegrupos');
 
-
-
+Route::get('/tablas','controller_alumnos@tablas');
 Route::get('/altalumno','controller_alumnos@altalumno');
 Route::POST('/guardalumno','controller_alumnos@guardalumno')->name('guardalumno');
 Route::get('/reportealumno','controller_alumnos@reportealumno');
 
 Route::get('/altatutor','controller_tutors@altatutor');
 Route::POST('/guardatutor','controller_tutors@guardatutor')->name('guardatutor');
+Route::get('/reportetutor','controller_tutors@reportetutor');
 
 Route::get('/altaprofesor','controller_profesors@altaprofesor');
 Route::POST('/guardaprofesor','controller_profesors@guardaprofesor')->name('guardaprofesor');
-
-Route::get('/altaclientes','uniformes@altaclientes');
-Route::POST('/guardacliente','uniformes@guardacliente')->name('guardacliente');
+Route::get('/reporteprofesor','controller_profesors@reporteprofesor');

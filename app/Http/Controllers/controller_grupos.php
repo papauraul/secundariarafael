@@ -64,11 +64,17 @@ class controller_grupos extends Controller
 		
 	}
 	
-	
-	
 	/////////
    
-   
+//Reporte//
+	public function reportegrupos()
+	{
+	$grupos=grupos::withTrashed()->orderBy('id_grupo','asc')
+	          ->get();
+	  return view('sistema.reportegrupos')
+	  ->with('grupos',$grupos);                  
+	}
+	//////////   
    
    
    

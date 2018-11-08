@@ -1,9 +1,12 @@
-<html>
-<body>
+@extends('sistema.alta')
+@section('contenido')
+@section('altas')
+<center>
+<h1>Alta Tutor</h1>
+ <table>
 
+<th>Alta Tutor</th>
 
-<h1>Alta tutor</h1>
-<br>
 <form action =  "{{route('guardatutor')}}" method ="POST" enctype="multipart/form-data">                 
 {{csrf_field()}}
 
@@ -105,5 +108,6 @@ seleccione id de nom_tut <select name = 'id_mun'>
 <br>					
 <input type = 'submit' value = 'Guardar'>
 </form>
-</body>
-</html>
+</center>
+</table>
+@stop

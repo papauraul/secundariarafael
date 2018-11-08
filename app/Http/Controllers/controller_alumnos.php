@@ -13,6 +13,10 @@ use App\generacions;
 
 class controller_alumnos extends Controller
 {
+	public function tablas()
+	{
+		return view('sistema.tablas');
+	}
        public function altalumno()
     {
      	 //select * from carreras     all()

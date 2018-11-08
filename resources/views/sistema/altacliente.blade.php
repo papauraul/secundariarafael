@@ -1,16 +1,27 @@
-<html>
-<body>
+@extends('sistema.alta')
+@section('contenido')
+@section('altas')
+<center>
 <h1> Alta de clientes </h1>
-<br>
+<table>
+
+<th>Alta Ciclo</th>
+
 <form action = '{{route('guardacliente')}}' method = 'POST' enctype='multipart/form-data'>
 {{csrf_field()}}
 
+<tr><td>
 @if($errors->first('id_cli')) 
 <i> {{ $errors->first('id_cli') }} </i> 
 @endif	<br>
-        
+        <span class="input-group-btn">
+<div class="form-group input-group">
 
-Clave del cliente <input type = 'text' name = 'id_cli' value="{{$id_cs}}" readonly ='readonly'>
+<h1  size="3">Clave del cliente </h1></td><td><input type = 'text' class="form-control" name = 'id_cli' value="{{$id_cs}}" readonly ='readonly'>
+</td></tr>
+</span>
+</div>
+<tr><td>
 <br>
 @if($errors->first('nombre')) 
 <i> {{ $errors->first('nombre') }} </i> 
@@ -69,8 +80,7 @@ Seleccione foto<input type= 'file' name = 'archivo'>
 <input type = 'submit' value = 'Guardar'>
 <br>
 </form>
-</body>
-</html>
+@stop
 
 
 

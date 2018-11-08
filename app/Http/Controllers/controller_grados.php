@@ -58,7 +58,17 @@ class controller_grados extends Controller
 		  
         
     }
+	///////
 	
+	//Reporte//
+	public function reportegrados()
+	{
+	$grados=grados::withTrashed()->orderBy('id_grado','asc')
+	          ->get();
+	  return view('sistema.reportegrados')
+	  ->with('grados',$grados);                  
+	}
+	//////////
 	
 	
 	
