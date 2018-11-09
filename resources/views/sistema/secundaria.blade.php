@@ -29,7 +29,7 @@
                 </button>
 				 
                 <a class="navbar-brand" href="index.html">
-				 <img src="assets/img/escudosec.png" alt="" />
+				 <img src="assets/img/escudosec.jpg" alt="" />
                 
                 </a>
             </div>
