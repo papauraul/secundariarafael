@@ -66,7 +66,14 @@ class controller_cicloescolars extends Controller
 	//////
 	
 	//Reporte//
-	
+	public function reporteciclo()
+	{
+	$cicloescolars=cicloescolars::orderBy('id_ce','asc')
+	          ->get();
+	  return view('sistema.reporteciclo')
+	  ->with('cicloescolars',$cicloescolars);                  
+	}
+	////////// 
 	
 	
     

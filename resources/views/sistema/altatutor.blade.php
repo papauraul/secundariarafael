@@ -1,6 +1,6 @@
-@extends('sistema.alta')
+@extends('sistema.tablas')
 @section('contenido')
-@section('altas')
+@section('tablas')
 <center>
 <h1>Alta Tutor</h1>
  <table>

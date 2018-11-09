@@ -1,6 +1,6 @@
-@extends('sistema.alta')
+@extends('sistema.tablas')
 @section('contenido')
-@section('altas')
+@section('tablas')
 <center>
 <h1>Alta Alumno</h1>
  <table>
@@ -15,7 +15,7 @@
 @endif	<br>
 
 <span class="input-group-btn">
-<div class="form-group input-group">  
+<div class="form-group input-group"> 
 <h1  size="3">Clave<input type = 'text' class="form-control" name = 'id_alum' value="{{$ida}}" readonly ='readonly'>
 <br>
 </td></tr>
@@ -28,7 +28,7 @@
 @endif	<br>
 
 <span class="input-group-btn">
-<div class="form-group input-group">  
+<div class="form-group input-group">
 <h1  size="3">Nombre<input type = 'text' class="form-control" name  ='nom_al' value="{{old('nom_al')}}"> 
 <br>
 </td></tr>

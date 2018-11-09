@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +8,13 @@
     <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" />
-      <link href="assets/css/main-style.css" rel="stylesheet" />
-
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/main-style.css" rel="stylesheet" />
     <!-- Page-Level CSS -->
-    <link href="assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
-
-</head>
-
+    <link href="assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+   </head>
 <body>
+@yield('contenido')
     <!--  wrapper -->
     <div id="wrapper">
         <!-- navbar top -->
@@ -31,18 +28,19 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.png" alt="" />
+                  <img src="assets/img/escudosec.jpg" alt="" />
                 </a>
             </div>
             <!-- end navbar-header -->
             <!-- navbar-top-links -->
-            <ul class="nav navbar-top-links navbar-right">
-                <!-- main dropdown -->
+      
+		   <ul class="nav navbar-top-links navbar-right">
+                <!-- main dropdown -
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
                     </a>
-                    <!-- dropdown-messages -->
+                    <!-- dropdown-messages --
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
                             <a href="#">
@@ -87,14 +85,14 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- end dropdown-messages -->
-                </li>
-
+                    <!-- end dropdown-messages 
+                </li> -->
+<!--
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
                     </a>
-                    <!-- dropdown tasks -->
+                    <!-- dropdown tasks -
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
                             <a href="#">
@@ -167,14 +165,14 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- end dropdown-tasks -->
-                </li>
-
+                    <!-- end dropdown-tasks 
+                </li> -->
+<!--
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
                     </a>
-                    <!-- dropdown alerts-->
+                    <!-- dropdown alerts-
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
                             <a href="#">
@@ -228,9 +226,9 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- end dropdown-alerts -->
+                    <!-- end dropdown-alerts 
                 </li>
-
+-->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-3x"></i>
@@ -267,7 +265,7 @@
                                 <img src="assets/img/user.jpg" alt="">
                             </div>
                             <div class="user-info">
-                                <div>Jonny <strong>Deen</strong></div>
+                                <div><strong></strong></div>
                                 <div class="user-text-online">
                                     <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
                                 </div>
@@ -287,93 +285,133 @@
                         </div>
                         <!--end search section-->
                     </li>
-                    <li class="">
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Charts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="flot.html">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="morris.html">Morris Charts</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                     <li>
-                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
-                    </li>
+					
+					
+<!--Menu desplegable-->		
+
                     <li class="selected">
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Inicio</a>
                     </li>
+					   <!-- Conocenos -->
                     <li>
-                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Forms</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Conocenos<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
+                                <a href="flot.html">Misión y Visión</a>
                             </li>
                             <li>
-                                <a href="buttons.html">Buttons</a>
+                                <a href="flot.html">Programa Institucional</a>
                             </li>
                             <li>
-                                <a href="notifications.html">Notifications</a>
+                                <a href="morris.html">Ubicación</a>
                             </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
+							 <li>
+                                <a href="flot.html">Modelo Educativo</a>
                             </li>
                         </ul>
-                        <!-- second-level-items -->
+                     
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
+					   <!--Cotrol Escolar  -->
+					<li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Control Escolar<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="flot.html">Convocatorias</a>
+                            </li>
+							 <li>
+                                <a href="flot.html">Becas</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="morris.html">Consulta de calificaciones</a>
                             </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- third-level-items -->
+							 <li>
+                                <a href="flot.html">Calendario Escolar</a>
                             </li>
                         </ul>
-                        <!-- second-level-items -->
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
+					
+					   <!-- Altas -->
+					<li>
+                        <a href=""><i class="fa fa-bar-chart-o fa-fw"></i> Altas<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="blank.html">Blank Page</a>
+                                <a href="{{URL::action('controller_alumnos@altalumno')}}">Alumnos</a>
                             </li>
                             <li>
-                                <a href="login.html">Login Page</a>
+                                <a href="{{URL::action('controller_profesors@altaprofesor')}}">Profesores</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_tutors@altatutor')}}">Tutores</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_grados@altagrados')}}">Grado</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_grupos@altagrupos')}}">Grupo</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_cicloescolars@altaciclo')}}">Ciclo Escolar</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_municipios@altamunicipios')}}">Municipio</a>
                             </li>
                         </ul>
-                        <!-- second-level-items -->
                     </li>
+					
+					<!-- Consultas -->
+					
+					<li>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>Consultas<span class="fa arrow"></span></a>
+                     <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{URL::action('controller_alumnos@reportealumno')}}">Alumnos</a>
+                            </li>
+                            <li>
+                                <a href="{{URL::action('controller_profesors@reporteprofesor')}}">Profesores</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_tutors@reportetutor')}}">Tutores</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_grados@reportegrados')}}">Grado</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_grupos@reportegrupos')}}">Grupo</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_cicloescolars@reporteciclo')}}">Ciclo Escolar</a>
+                            </li>
+							 <li>
+                                <a href="{{URL::action('controller_municipios@reportemunicipio')}}">Municipio</a>
+                            </li>
+                        </ul>
+					</li>
+					
+					
+					<!-- Marco Juridico -->
+					<li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Marco Juridico<span class="fa arrow"></span></a>
+                       <ul class="nav nav-second-level">
+                            <li>
+                                <a href="blank.html">Reglamentos</a>
+                            </li>
+                        </ul>
+					   
+                    </li>
+					
+					<!-- Vinculos -->
+					<li>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i>Vinculos de interés<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="blank.html">Aviso de Pirvacidad</a>
+                            </li>
+                            <li>
+                                <a href="login.html">CEMyBS</a>
+                            </li>
+                        </ul>
+                    </li>
+					
                 </ul>
                 <!-- end side-menu -->
             </div>
@@ -383,478 +421,142 @@
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
-            
             <div class="row">
-                 <!--  page header -->
+			
+                <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tables</h1>
+                    <h1 class="page-header">Secundaria Rafael Ramirez</h1>
+					@yield('contenido')
                 </div>
-                 <!-- end  page header -->
+                <!--End Page Header -->
             </div>
-            <div class="row">
+   <div class="row">
                 <div class="col-lg-12">
-                    <!-- Advanced Tables -->
+                    <!-- Form Elements -->
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                             Advanced Tables
-                        </div>
+                        
                         <div class="panel-body">
-                            <div class="table-responsive">
-							@yield('campos')
-                                
-                                        <!--<tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 4.0</td>
-                                            <td>Win 95+</td>
-                                            <td class="center">4</td>
-                                            <td class="center">X</td>
-                                        </tr>
-                                        <tr class="even gradeC">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.0</td>
-                                            <td>Win 95+</td>
-                                            <td class="center">5</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.5</td>
-                                            <td>Win 95+</td>
-                                            <td class="center">5.5</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="even gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 6</td>
-                                            <td>Win 98+</td>
-                                            <td class="center">6</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 7</td>
-                                            <td>Win XP SP2+</td>
-                                            <td class="center">7</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="even gradeA">
-                                            <td>Trident</td>
-                                            <td>AOL browser (AOL desktop)</td>
-                                            <td>Win XP</td>
-                                            <td class="center">6</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Firefox 1.0</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.7</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Firefox 1.5</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Firefox 2.0</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Firefox 3.0</td>
-                                            <td>Win 2k+ / OSX.3+</td>
-                                            <td class="center">1.9</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Camino 1.0</td>
-                                            <td>OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Camino 1.5</td>
-                                            <td>OSX.3+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Netscape 7.2</td>
-                                            <td>Win 95+ / Mac OS 8.6-9.2</td>
-                                            <td class="center">1.7</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Netscape Browser 8</td>
-                                            <td>Win 98SE+</td>
-                                            <td class="center">1.7</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Netscape Navigator 9</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.0</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.1</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1.1</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.2</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1.2</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.3</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1.3</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.4</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1.4</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.5</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1.5</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.6</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1.6</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.7</td>
-                                            <td>Win 98+ / OSX.1+</td>
-                                            <td class="center">1.7</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Mozilla 1.8</td>
-                                            <td>Win 98+ / OSX.1+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Seamonkey 1.1</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Gecko</td>
-                                            <td>Epiphany 2.20</td>
-                                            <td>Gnome</td>
-                                            <td class="center">1.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>Safari 1.2</td>
-                                            <td>OSX.3</td>
-                                            <td class="center">125.5</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>Safari 1.3</td>
-                                            <td>OSX.3</td>
-                                            <td class="center">312.8</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>Safari 2.0</td>
-                                            <td>OSX.4+</td>
-                                            <td class="center">419.3</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>Safari 3.0</td>
-                                            <td>OSX.4+</td>
-                                            <td class="center">522.1</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>OmniWeb 5.5</td>
-                                            <td>OSX.4+</td>
-                                            <td class="center">420</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>iPod Touch / iPhone</td>
-                                            <td>iPod</td>
-                                            <td class="center">420.1</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Webkit</td>
-                                            <td>S60</td>
-                                            <td>S60</td>
-                                            <td class="center">413</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 7.0</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 7.5</td>
-                                            <td>Win 95+ / OSX.2+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 8.0</td>
-                                            <td>Win 95+ / OSX.2+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 8.5</td>
-                                            <td>Win 95+ / OSX.2+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 9.0</td>
-                                            <td>Win 95+ / OSX.3+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 9.2</td>
-                                            <td>Win 88+ / OSX.3+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera 9.5</td>
-                                            <td>Win 88+ / OSX.3+</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Opera for Wii</td>
-                                            <td>Wii</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Nokia N800</td>
-                                            <td>N800</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Presto</td>
-                                            <td>Nintendo DS browser</td>
-                                            <td>Nintendo DS</td>
-                                            <td class="center">8.5</td>
-                                            <td class="center">C/A<sup>1</sup>
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>KHTML</td>
-                                            <td>Konqureror 3.1</td>
-                                            <td>KDE 3.1</td>
-                                            <td class="center">3.1</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>KHTML</td>
-                                            <td>Konqureror 3.3</td>
-                                            <td>KDE 3.3</td>
-                                            <td class="center">3.3</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>KHTML</td>
-                                            <td>Konqureror 3.5</td>
-                                            <td>KDE 3.5</td>
-                                            <td class="center">3.5</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Tasman</td>
-                                            <td>Internet Explorer 4.5</td>
-                                            <td>Mac OS 8-9</td>
-                                            <td class="center">-</td>
-                                            <td class="center">X</td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Tasman</td>
-                                            <td>Internet Explorer 5.1</td>
-                                            <td>Mac OS 7.6-9</td>
-                                            <td class="center">1</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Tasman</td>
-                                            <td>Internet Explorer 5.2</td>
-                                            <td>Mac OS 8-X</td>
-                                            <td class="center">1</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Misc</td>
-                                            <td>NetFront 3.1</td>
-                                            <td>Embedded devices</td>
-                                            <td class="center">-</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Misc</td>
-                                            <td>NetFront 3.4</td>
-                                            <td>Embedded devices</td>
-                                            <td class="center">-</td>
-                                            <td class="center">A</td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Misc</td>
-                                            <td>Dillo 0.8</td>
-                                            <td>Embedded devices</td>
-                                            <td class="center">-</td>
-                                            <td class="center">X</td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Misc</td>
-                                            <td>Links</td>
-                                            <td>Text only</td>
-                                            <td class="center">-</td>
-                                            <td class="center">X</td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Misc</td>
-                                            <td>Lynx</td>
-                                            <td>Text only</td>
-                                            <td class="center">-</td>
-                                            <td class="center">X</td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Misc</td>
-                                            <td>IE Mobile</td>
-                                            <td>Windows Mobile 6</td>
-                                            <td class="center">-</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Misc</td>
-                                            <td>PSP browser</td>
-                                            <td>PSP</td>
-                                            <td class="center">-</td>
-                                            <td class="center">C</td>
-                                        </tr>
-                                        <tr class="gradeU">
-                                            <td>Other browsers</td>
-                                            <td>All others</td>
-                                            <td>-</td>
-                                            <td class="center">-</td>
-                                            <td class="center">U</td>
-                                        </tr>-->
-                                    
+                            <div class="row">
+							@yield('tablas')
+                                <!--<div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>Text Input</label>
+                                            <input class="form-control">
+                                            <p class="help-block">Example block-level help text here.</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Text Input with Placeholder</label>
+                                            <input class="form-control" placeholder="Enter text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Static Control</label>
+                                            <p class="form-control-static">email@example.com</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>File input</label>
+                                            <input type="file">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Text area</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Checkboxes</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Checkbox 1
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Checkbox 2
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Checkbox 3
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Inline Checkboxes</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox">3
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Radio Buttons</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Radio 1
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio 2
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio 3
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Inline Radio Buttons</label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>1
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Selects</label>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Multiple Selects</label>
+                                            <select multiple class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit Button</button>
+                                        <button type="reset" class="btn btn-success">Reset Button</button>
+                                    </form>
+									
+                                </div>-->
+                               
+                                    </form>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
-                    <!--End Advanced Tables -->
+                    <!-- End Form Elements -->
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                  <!--   Kitchen Sink -->
-                    
-                     <!-- End  Kitchen Sink -->
-                </div>
-                <div class="col-lg-6">
-                     <!--   Basic Table  -->
-                    
-                      <!-- End  Basic Table  -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                      <!--    Striped Rows Table  -->
-                    
-                    <!--  End  Striped Rows Table  -->
-                </div>
-                <div class="col-lg-6">
-                    <!--    Bordered Table  -->
-                    
-                     <!--  End  Bordered Table  -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                     <!--    Hover Rows  -->
-                
-                    <!-- End  Hover Rows  -->
-                </div>
-                <div class="col-lg-6">
-                     <!--    Context Classes  -->
-                
-                    <!--  end  Context Classes  -->
-                </div>
-            </div>
+    
+
+
         </div>
         <!-- end page-wrapper -->
 
@@ -868,15 +570,10 @@
     <script src="assets/plugins/pace/pace.js"></script>
     <script src="assets/scripts/siminta.js"></script>
     <!-- Page-Level Plugin Scripts-->
-    <script src="assets/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="assets/plugins/dataTables/dataTables.bootstrap.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#dataTables-example').dataTable();
-        });
-    </script>
+    <script src="assets/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/plugins/morris/morris.js"></script>
+    <script src="assets/scripts/dashboard-demo.js"></script>
 
 </body>
 
 </html>
-

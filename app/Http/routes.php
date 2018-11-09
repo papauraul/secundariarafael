@@ -75,6 +75,7 @@ Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guarda
 Route::get('/reporteciclo','controller_cicloescolars@reporteciclo');
 
 
+
 Route::get('/altagrupos','controller_grupos@altagrupos');
 Route::POST('/guardagrupo','controller_grupos@guardagrupo')->name('guardagrupo');
 Route::get('/reportegrupos','controller_grupos@reportegrupos');

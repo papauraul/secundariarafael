@@ -1,6 +1,6 @@
-@extends('sistema.alta')
+@extends('sistema.tablas')
 @section('contenido')
-@section('altas')
+@section('tablas')
 <center>
 <h1>Alta Ciclo</h1>
  <table>
@@ -8,14 +8,17 @@
 <form action = "{{route('guardaciclo')}}" method = "POST" >                   
 {{csrf_field()}}
         
-
-
+	<tr><td>	
 @if($errors->first('id_ce')) 
 <i> {{ $errors->first('id_ce') }} </i> 
 @endif	
-	
-<h1  size="3">Clave</h1></td><td><input type = 'text'  class="form-control" name = 'id_ce' value="{{$idce}}" readonly ='readonly' class="form-control">
-
+	<span class="input-group-btn">
+<div class="form-group input-group">
+<h4>Clave</h4></td><td><input type = 'text'  class="form-control" name = 'id_ce' value="{{$idce}}" readonly ='readonly'>
+</span>
+</div>
+		</tr></td>
+	<br> <br>
 <tr><td>
 @if($errors->first('ciclo_escolar')) 
 <i> {{ $errors->first('ciclo_escolar') }} </i> 
@@ -23,8 +26,11 @@
 <span class="input-group-btn">
 <div class="form-group input-group">
 
-<h1>Ciclo Escolar</h1></td><td><input type = 'text' class="form-control" name  ='ciclo_escolar' value="{{old('ciclo_escolar')}}">
-</td></tr>
+<h4>Ciclo_Escolar</h4></td><td><input type = 'text' class="form-control" name  ='ciclo_escolar' value="{{old('ciclo_escolar')}}">
+</span>
+</div>
+		</tr></td>
+		<br> <br>
 </span>
 </div>
 <tr><td>

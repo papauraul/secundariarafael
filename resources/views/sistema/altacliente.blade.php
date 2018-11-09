@@ -1,4 +1,4 @@
-@extends('sistema.alta')
+@extends('sistema.tablas')
 @section('contenido')
 @section('altas')
 <center>

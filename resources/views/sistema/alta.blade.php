@@ -288,7 +288,7 @@
                         <!--end search section-->
                     </li>
                     <li class="">
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Menu</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Charts<span class="fa arrow"></span></a>

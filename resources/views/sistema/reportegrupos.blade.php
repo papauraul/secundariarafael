@@ -1,9 +1,9 @@
-
 @extends('sistema.tablas')
 @section('contenido')
+@section('tablas')
+<h1> Reporte grupos</h1>
 <br>
 
-@section('campos')
 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
 <tr><td>Clave</td><td>Grupo</td><td>Grado</td></tr>
 
