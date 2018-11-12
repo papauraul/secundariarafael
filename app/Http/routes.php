@@ -73,6 +73,8 @@ Route::POST('/guardamodificag','controller_grados@guardamodificag')->name('guard
 Route::get('/altaciclo','controller_cicloescolars@altaciclo');
 Route::POST('/guardaciclo','controller_cicloescolars@guardaciclo')->name('guardaciclo');
 Route::get('/reporteciclo','controller_cicloescolars@reporteciclo');
+Route::get('/eliminam/{id_ce}','controller_cicloescolars@eliminaciclo')->name('eliminaciclo');
+//Route::get('/modificam/{id_ce}','controller_cicloescolars@modificaciclo')->name('modificaciclo');
 
 
 

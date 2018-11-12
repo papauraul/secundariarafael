@@ -424,7 +424,7 @@
             <div class="row">
 			
                 <!-- Page Header -->
-                <div class="col-lg-12">
+                <div class="col-lg-12"> <!--Color fondo-->
                     <h1 class="page-header">Secundaria Rafael Ramirez</h1>
 					@yield('contenido')
                 </div>
@@ -433,7 +433,7 @@
    <div class="row">
                 <div class="col-lg-12">
                     <!-- Form Elements -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-default"> <!--fondo blanco-->
                         
                         <div class="panel-body">
                             <div class="row">

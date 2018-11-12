@@ -70,6 +70,18 @@ class controller_municipios extends Controller
 	  ->with('municipios',$municipios);                  
 	}
 	//////////
+	
+	//Eliminacion//
+	public function eliminamunicipio($id_mun)
+	{
+		municipios::find($id_mun)->delete();
+		$proceso = "ELIMINAR MUNICIPIO";
+		$mensaje = "El municipio ha sido borrado Correctamente";
+		return view ('sistema.mensaje')
+				->with('proceso',$proceso)
+				->with('mensaje',$mensaje);
+	}
+	//////
 
 
 

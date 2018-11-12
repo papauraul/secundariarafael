@@ -70,6 +70,18 @@ class controller_grados extends Controller
 	}
 	//////////
 	
+	//Eliminacion//
+	public function eliminagrados($id_grado)
+	{
+		grados::find($id_grado)->delete();
+		$proceso = "ELIMINAR GRADO";
+		$mensaje = "El grado ha sido borrado Correctamente";
+		return view ('sistema.mensaje')
+				->with('proceso',$proceso)
+				->with('mensaje',$mensaje);
+	}
+	//////
+	
 	
 	
 }
