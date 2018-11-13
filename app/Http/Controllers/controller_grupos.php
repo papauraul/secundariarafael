@@ -76,17 +76,5 @@ class controller_grupos extends Controller
 	}
 	//////////   
    
-   //Eliminacion//
-	public function eliminagrupos($id_grupo)
-	{
-		grupos::find($id_grupo)->delete();
-		$proceso = "ELIMINAR GRUPO";
-		$mensaje = "El grupo ha sido borrado Correctamente";
-		return view ('sistema.mensaje')
-				->with('proceso',$proceso)
-				->with('mensaje',$mensaje);
-	}
-	//////
-   
    
 }

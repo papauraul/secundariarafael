@@ -18,15 +18,12 @@
 	<td>{{$cl->id_ce}}</td><td>{{$cl->ciclo_escolar}}</td>
 	<td>{{$cl->id_gen}}</td>
 		<td>	
-<a href="{{URL::action('controller_cicloescolars@eliminaciclo',['id_ce'=>$cl->id_ce])}}">
-<button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-trash"></span>  
-        </button>
-		<a href="#"><button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-edit"></span> Edit
-        </button></a>
-</a>
-  </button>
+		
+<a href="#">
+<span class = "glyphicon glyphicon-trash"></span>
+
+<a href="#"><span class = "glyphicon glyphicon-pencil"></span></a>
+
   </td>
 	</tr>
 	@endforeach

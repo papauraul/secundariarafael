@@ -7,7 +7,7 @@
 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
 <tr><td>Clave</td><td>RFC</td><td>Nombre</td><td>App</td>
 <td>Amm</td><td>Sexo</td><td>Edad</td><td>Calle</td><td>Localidad</td>
-<td>Telefono</td><td>Archivo</td><td>Municipio</td></tr>
+<td>Telefono</td><td>Archivo</td><td>Municipio</td><td>Acción</td></tr>
 
 	@foreach($profesors as $pr)
 	<tr>
@@ -19,6 +19,12 @@
     <td>{{$pr->localidad}}</td><td>{{$pr->telefono}}</td>
     <td><img src="{{asset('archivos/'.$pr->archivo)}}" height="50" width="50"></td>
 	<td>{{$pr->id_mun}}</td>
+	<td>	
+<a href="#">
+<span class = "glyphicon glyphicon-trash"></span>
+
+<a href="#"><span class = "glyphicon glyphicon-pencil"></span></a>
+  </td>
 	</tr>
 	
 	@endforeach

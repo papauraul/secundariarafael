@@ -122,16 +122,5 @@ class controller_tutors extends Controller
 	}
 	//////////
 	
-	//Eliminacion//
-	public function eliminaturor($id_tut)
-	{
-		tutors::find($id_tut)->delete();
-		$proceso = "ELIMINAR TUTOR";
-		$mensaje = "El tutor ha sido borrado Correctamente";
-		return view ('sistema.mensaje')
-				->with('proceso',$proceso)
-				->with('mensaje',$mensaje);
-	}
-	//////
 	
 }

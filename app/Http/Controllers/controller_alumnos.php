@@ -130,19 +130,7 @@ class controller_alumnos extends Controller
 	  ->with('alumnos',$alumnos);                  
 	}
 	//////////
-   
-   //Eliminacion//
-	public function eliminalumno($id_alum)
-	{
-		alumnos::find($id_alum)->delete();
-		$proceso = "ELIMINAR ALUMNO";
-		$mensaje = "El alumno ha sido borrado Correctamente";
-		return view ('sistema.mensaje')
-				->with('proceso',$proceso)
-				->with('mensaje',$mensaje);
-	}
-	//////
-   
+
    
    
    

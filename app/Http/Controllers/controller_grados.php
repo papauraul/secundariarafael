@@ -30,7 +30,7 @@ class controller_grados extends Controller
 								}
 								//////
      return view ("sistema.altagrados")
-	 ->with('idgrado',$id_grado);
+	 ->with('id_grado',$id_grado);
 	}
 	
 	/////
@@ -69,18 +69,6 @@ class controller_grados extends Controller
 	  ->with('grados',$grados);                  
 	}
 	//////////
-	
-	//Eliminacion//
-	public function eliminagrados($id_grado)
-	{
-		grados::find($id_grado)->delete();
-		$proceso = "ELIMINAR GRADO";
-		$mensaje = "El grado ha sido borrado Correctamente";
-		return view ('sistema.mensaje')
-				->with('proceso',$proceso)
-				->with('mensaje',$mensaje);
-	}
-	//////
 	
 	
 	

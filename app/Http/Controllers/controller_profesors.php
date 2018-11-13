@@ -119,16 +119,5 @@ class controller_profesors extends Controller
 	}
 	//////////
 	
-	//Eliminacion//
-	public function eliminaprofesor($id_profe)
-	{
-		profesors::find($id_profe)->delete();
-		$proceso = "ELIMINAR PROFESOR";
-		$mensaje = "El profesor ha sido borrado Correctamente";
-		return view ('sistema.mensaje')
-				->with('proceso',$proceso)
-				->with('mensaje',$mensaje);
-	}
-	//////
-	
+
 }

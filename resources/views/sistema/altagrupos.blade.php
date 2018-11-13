@@ -2,37 +2,33 @@
 @section('contenido')
 @section('tablas')
 <center>
-<h1>Alta Grupos</h1>
  <table>
+<div class="contenedor">
+<h1>Alta Grupos</h1>
 
 <form action = "{{route('guardagrupo')}}" method = "POST" >                   
 {{csrf_field()}}
+
+<!--<input type="hidden" name="_token" value="8FYyOYdjGSRQnl8G0dcTMZSrduj47BccdM9MnAAi">
+-->
 <tr><td>
 @if($errors->first('id_grupo')) 
 <i> {{ $errors->first('id_grupo') }} </i> 
-@endif	<br>
-
-<span class="input-group-btn">
-<div class="form-group input-group">
+@endif
     
-<h4  size="3">Clave<input type = 'text'  name = 'id_grupo' value="{{$idg}}" readonly ='readonly'>
-<br>
+Clave<input type = 'text' class="form-control" name = 'id_grupo' value="{{$idg}}" readonly ='readonly'>
+
 </td></tr>
-</span>
-</div>
 
 <tr><td>
 @if($errors->first('grupo')) 
 <i> {{ $errors->first('grupo') }} </i> 
-@endif	<br>
-<span class="input-group-btn">
-<div class="form-group input-group">
+@endif
 
-<h4>Grupo<input type = 'text'  name  ='grupo' value="{{old('grupo')}}">
+Grupo<input type = 'text' class="form-control"  name  ='grupo' value="{{old('grupo')}}">
 <br>
 </td></tr>
-</span>
-</div>
+
 <tr><td>
 <div class="form-group">
 <label>Seleccione id de grados</label>
@@ -47,6 +43,8 @@
 <tr><td>
 <input type = 'submit' class="btn btn-primary" value = 'Guardar'></td><td>
 <input type = 'reset' class="btn btn-success" value = 'Cancelar'></td></tr>
+
+</div>
 </form>
 </center>
 </table>

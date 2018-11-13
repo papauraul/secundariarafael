@@ -2,88 +2,84 @@
 @section('contenido')
 @section('tablas')
 <center>
-<h1>Alta Tutor</h1>
  <table>
-
-<th>Alta Tutor</th>
+<div class="contenedor">
+<h1>Alta Tutor</h1>
 
 <form action =  "{{route('guardatutor')}}" method ="POST" enctype="multipart/form-data">                 
 {{csrf_field()}}
 
+<!--<input type="hidden" name="_token" value="8FYyOYdjGSRQnl8G0dcTMZSrduj47BccdM9MnAAi">
+-->
+<tr><td>
 @if($errors->first('id_tut')) 
 <i> {{ $errors->first('id_tut') }} </i> 
-@endif	<br>
-        
-Clave<input type = 'text' name = 'id_tut' value="{{$idtut}}" readonly ='readonly'>
+@endif	
 
+Clave<input type = 'text' class="form-control" name = 'id_tut' value="{{$idtut}}" readonly ='readonly'>
+</tr></td>
+<br>
+<tr><td>
 <br>
 @if($errors->first('nom_tut')) 
 <i> {{ $errors->first('nom_tut') }} </i> 
-@endif	<br>
+@endif
 
-nom_tut<input type = 'text' name  ='nom_tut' value="{{old('nom_tut')}}">
-<br>
+Nombre<input type = 'text' class="form-control" name  ='nom_tut' value="{{old('nom_tut')}}">
 
 <br>
 @if($errors->first('app_tut')) 
 <i> {{ $errors->first('app_tut') }} </i> 
-@endif	<br>
+@endif
 
-app_tut<input type = 'text' name  ='app_tut' value="{{old('app_tut')}}">
-<br>
+Apellido Paterno<input type = 'text' class="form-control" name  ='app_tut' value="{{old('app_tut')}}">
 
 <br>
 @if($errors->first('apm_tut')) 
 <i> {{ $errors->first('apm_tut') }} </i> 
-@endif	<br>
+@endif
 
-apm_tut<input type = 'text' name  ='apm_tut' value="{{old('apm_tut')}}">
-<br>
+Apellido Materno<input type = 'text' class="form-control" name  ='apm_tut' value="{{old('apm_tut')}}">
 
 <br>
 @if($errors->first('edad')) 
 <i> {{ $errors->first('edad') }} </i> 
-@endif	<br>
+@endif
 
-edad<input type = 'text' name  ='edad' value="{{old('edad')}}">
-<br>
+Edad<input type = 'text' class="form-control" name  ='edad' value="{{old('edad')}}">
 
 <br>
 Sexo<input type="radio" name="sexo" value="F" CHECKED>F
 <input type="radio" name="sexo" value="M">M
 <br>
-
 <br>
 @if($errors->first('parentesco')) 
 <i> {{ $errors->first('parentesco') }} </i> 
-@endif	<br>
+@endif
 
-parentesco<input type = 'text' name  ='parentesco' value="{{old('parentesco')}}">
-<br>
+Parentesco<input type = 'text' class="form-control" name  ='parentesco' value="{{old('parentesco')}}">
 
 <br>
 @if($errors->first('calle')) 
 <i> {{ $errors->first('calle') }} </i> 
-@endif	<br>
+@endif	
 
-calle<input type = 'text' name  ='calle' value="{{old('calle')}}">
+Calle<input type = 'text' name  ='calle' value="{{old('calle')}}">
 <br>
 
 <br>
 @if($errors->first('localidad')) 
 <i> {{ $errors->first('localidad') }} </i> 
-@endif	<br>
+@endif
 
-localidad<input type = 'text' name  ='localidad' value="{{old('localidad')}}">
-<br>
+Localidad<input type = 'text' class="form-control" name  ='localidad' value="{{old('localidad')}}">
 
 <br>
 @if($errors->first('telefono')) 
 <i> {{ $errors->first('telefono') }} </i> 
-@endif	<br>
+@endif
 
-telefono<input type = 'text' name  ='telefono' value="{{old('telefono')}}">
-<br>
+Telefono<input type = 'text' class="form-control" name  ='telefono' value="{{old('telefono')}}">
 
 <br>
 @if($errors->first('archivo')) 
@@ -93,20 +89,23 @@ telefono<input type = 'text' name  ='telefono' value="{{old('telefono')}}">
 Seleccione foto<input type='file' name ='archivo'>
 <br>
 
-<br>
-seleccione id de alumno <select name = 'id_alum'>
+Seleccione Alumno <select name = 'id_alum'>
                         @foreach($alumnos as $alum)
 						<option value ="{{$alum->id_alum}}" >{{$alum->nom_al}}</option>
                         @endforeach
 						</select>
 <br>
-seleccione id de nom_tut <select name = 'id_mun'>
+Seleccione Municipio<select name = 'id_mun'>
                         @foreach($municipios as $mun)
 						<option value ="{{$mun->id_mun}}"> {{$mun->municipio}}</option>
                         @endforeach
 						</select>
-<br>					
-<input type = 'submit' value = 'Guardar'>
+<br><br><br>		
+<input type = 'submit' class="btn btn-primary" value = 'Guardar'>
+
+<input type = 'reset' class="btn btn-success" value = 'Cancelar'>
+
+</div>
 </form>
 </center>
 </table>
